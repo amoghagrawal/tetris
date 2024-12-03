@@ -1,0 +1,33 @@
+<html><head><base href="." /><title>Tetris</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    </head><body>
+        <audio id="bgMusic" loop>
+            <source src="./background-music.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <h1>Tetris</h1>
+        <div id="game-container">
+            <canvas id="board"></canvas>
+            <div id="info-panel">
+                <div class="stats">
+                    <h2>Score: <span id="score">0</span></h2>
+                    <h2>Level: <span id="level">1</span></h2>
+                    <h2>Lines: <span id="lines">0</span></h2>
+                </div>
+                <button id="reset">Reset Game</button>
+                <div class="controls">
+                    <h3>Controls:</h3>
+                    <p>← → : Move</p>
+                    <p>↓ : Soft Drop</p>
+                    <p>Space : Hard Drop</p>
+                    <p>Enter : Restart when game over</p>
+                </div>
+            </div>
+        </div>
+        <div id="game-over" class="game-over">
+            <h2>Game Over!</h2>
+            <p>Press Enter or click Reset to play again</p>
+        </div>
+        <script src="script.js"></script>
+</body></html>

@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1a1a1a;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: clamp(24px, 4vw, 32px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    flex-shrink: 0;
+}
+
+#game-container {
+    display: flex;
+    gap: 20px;
+    margin: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1;
+    max-height: calc(100vh - 100px);
+}
+
+#board {
+    border: 2px solid #333;
+    background: #000;
+    width: 250px;
+    height: 500px;
+    aspect-ratio: 1/2;
+    box-shadow: 0 0 20px rgba(51, 51, 51, 0.5);
+}
+
+#info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 200px;
+    height: 100%;
+}
+
+.stats {
+    background: #333;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 200px;
+    box-shadow: 0 0 15px rgba(51, 51, 51, 0.7);
+}
+
+.stats h2 {
+    margin: 5px 0;
+    font-size: 16px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+}
+
+button {
+    background: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+    font-family: 'Press Start 2P', cursive;
+    width: 100%;
+}
+
+button:hover {
+    background: #45a049;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
+}
+
+.controls {
+    font-size: 12px;
+    background: #333;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(51, 51, 51, 0.7);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.controls h3 {
+    margin: 5px 0;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.controls p {
+    margin: 5px 0;
+    white-space: nowrap;
+}
+
+.game-over {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+    z-index: 100;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+    #game-container {
+        flex-direction: column;
+        align-items: center;
+        max-height: none;
+    }
+    
+    #board {
+        width: 200px;
+        height: 400px;
+    }
+    
+    #info-panel {
+        min-width: 200px;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .stats {
+        min-width: unset;
+        width: 100%;
+    }
+
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+}
